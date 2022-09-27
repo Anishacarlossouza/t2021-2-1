@@ -1,0 +1,54 @@
+import java.util.Scanner;
+class  Calculator
+
+	{
+		public static void main(String args[])
+		{
+		char  typeofoperation;
+		double  a, b, result;
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Choose an arithmatic operation +,-,*,/");
+		typeofoperation=scan.next().charAt(0);
+
+		System.out.println("Enter the first number");
+		a=scan.nextDouble();
+		System.out.println("Enter the second number");
+		b=scan.nextDouble();
+
+		switch(typeofoperation)
+		{
+			case '+':
+			result=a+b;
+			System.out.println("Result is:" +result);
+			break;
+
+			case '-':
+			result=a-b;
+			System.out.println(result);
+			break;
+
+
+			case '*':
+			result=a*b;
+			System.out.println(result);
+			break;
+
+
+			case '/':
+			result=a/b;
+			System.out.println(result);
+			break;
+
+			default:
+			result=a+b;
+			System.out.println("Invalid");
+			break;
+
+		}
+
+		scan.close();
+
+		
+	}
+	}
+
